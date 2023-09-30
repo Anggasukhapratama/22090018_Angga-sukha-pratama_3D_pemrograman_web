@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Deklarasi pengaturan karakter set ke UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Menentukan tampilan responsif -->
+  <title>Hidup Sehat</title> <!-- Judul halaman web -->
+  <link rel="stylesheet" href="style.css"> <!-- Menghubungkan ke file CSS eksternal "style.css" -->
+  <style>
+    /* CSS Styles - Start */
+
+    /* Reset CSS untuk semua elemen */
+    * {
+      text-decoration: none; /* Menghapus semua garis bawah pada tautan */
+      margin: 0px; /* Mengatur margin ke 0 */
+      padding: 0px; /* Mengatur padding ke 0 */
+    }
+
+    /* Mengatur tampilan halaman */
+    body {
+      margin: 0px; /* Mengatur margin ke 0 pada body */
+      padding: 0px; /* Mengatur padding ke 0 pada body */
+      font-family: 'open sans', sans-serif; /* Mengatur jenis font */
+    }
+
+    .wrapper {
+      width: 1100px; /* Lebar kontainer */
+      margin: auto; /* Posisi kontainer ke tengah */
+      position: relative; /* Posisi relatif untuk elemen anak */
+    }
+
+    .logo a {
+      font-size: 50px; /* Ukuran font */
+      font-weight: 800; /* Ketebalan font */
+      float: left; /* Menyusun elemen ke kiri */
+      font-family: Courier; /* Jenis font */
+      color: darkslategray; /* Warna teks */
+    }
+
+    .menu {
+      float: right; /* Menyusun elemen ke kanan */
+    }
+
+    nav {
+      width: 100%; /* Lebar elemen nav */
+      max-resolution: auto; /* Resolusi maksimum */
+      display: flex; /* Mengatur tampilan elemen menjadi flexbox */
+      line-height: 80px; /* Tinggi baris teks dalam menu */
+      position: sticky; /* Elemen menempel saat di-scroll */
+      position: -webkit-sticky; /* Untuk browser Safari */
+      top: 0; /* Posisi atas */
+      background-color: white; /* Warna latar belakang */
+      z-index: 1; /* Menentukan tingkat tampilan */
+      border-bottom: 1px solid rgb(0, 0, 0); /* Garis bawah dengan warna */
+    }
+
+    nav ul {
+      list-style-type: none; /* Menghilangkan tanda bullet pada daftar */
+      margin: 0; /* Mengatur margin ke 0 */
+      padding: 0; /* Mengatur padding ke 0 */
+      overflow: hidden; /* Mengatur overflow menjadi tersembunyi */
+    }
+
+    nav ul li {
+      float: left; /* Menyusun elemen daftar ke kiri */
+    }
+
+    nav ul li a {
+      color: black; /* Warna teks */
+      font-weight: bold; /* Ketebalan font */
+      text-align: center; /* Posisi teks ke tengah */
+      padding: 0px 16px 0px 16px; /* Padding */
+      text-decoration: none; /* Menghapus garis bawah pada tautan */
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline; /* Teks bergaris bawah saat dihover */
+    }
+
+    .gambardokter {
+      margin-left: 80px; /* Margin kiri */
+      margin-bottom: 80px; /* Margin bawah */
+    }
+
+    section {
+      margin: auto; /* Pusatkan elemen */
+      display: flex; /* Mengatur tampilan elemen menjadi flexbox */
+      margin-bottom: 100px; /* Margin bawah */
+    }
+
+    .kolom {
+      margin-top: 150px; /* Margin atas */
+      margin-bottom: auto; /* Margin bawah */
+      margin-left: 170px; /* Margin kiri */
+    }
+
+    .kolom .deskripsi {
+      text-align: justify; /* Posisi teks rata kiri dan kanan */
+      font-size: 20px; /* Ukuran font */
+      font-weight: bold; /* Ketebalan font */
+      font-family: 'comic sans ms'; /* Jenis font */
+      color: darkslategrey; /* Warna teks */
+    }
+
+    h2 {
+      font-family: 'comic sans ms'; /* Jenis font */
+      font-weight: 800; /* Ketebalan font */
+      font-size: 45px; /* Ukuran font */
+      margin-bottom: 20px; /* Margin bawah */
+      color: darkslategray; /* Warna teks */
+      width: 100%; /* Lebar elemen */
+      line-height: 50px; /* Tinggi baris teks */
+    }
+
+    a.tbl-biru {
+      background: rgb(47, 150, 247); /* Warna latar belakang */
+      border-radius: 20px; /* Radius sudut border */
+      margin-top: 20px; /* Margin atas */
+      margin-top: 20; /* Margin atas (redundan) */
+      padding: 15px 20px 15px 20px; /* Padding */
+      color: aliceblue; /* Warna teks */
+      cursor: crosshair; /* Kursor saat dihover */
+      font-weight: bold; /* Ketebalan font */
+    }
+
+    a.tbl-biru:hover {
+      background-color: blue; /* Warna latar belakang saat dihover */
+      text-decoration: none; /* Menghapus garis bawah pada tautan saat dihover */
+    }
+
+    a.tbl-pink {
+      background-color: deeppink; /* Warna latar belakang */
+      border-radius: 20px; /* Radius sudut border */
+      margin-top: 20px; /* Margin atas */
+      padding: 15px 20px 15px 20px; /* Padding */
+      color: aliceblue; /* Warna teks */
+      cursor: pointer; /* Kursor saat dihover */
+      font-weight: bold; /* Ketebalan font */
+    }
+
+    p {
+      margin: 10px 0px 10px 0px; /* Margin */
+      padding: 10px 0px 10px 0px; /* Padding */
+    }
+
+    a.tbl-pink:hover {
+      background-color: rgb(173, 54, 252); /* Warna latar belakang saat dihover */
+      text-decoration: none; /* Menghapus garis bawah pada tautan saat dihover */
+    }
+
+    .kolom2 {
+      margin-bottom: 50px; /* Margin bawah */
+      margin-left: 80px; /* Margin kiri */
+    }
+
+    .kolom2 .deskripsi2 {
+      text-align: justify; /* Posisi teks rata kiri dan kanan */
+      font-size: 20px; /* Ukuran font */
+      font-weight: bold; /* Ketebalan font */
+      font-family: 'comic sans ms'; /* Jenis font */
+      color: darkslategrey; /* Warna teks */
+    }
+
+    .kolom3 {
+      margin-top: 150px; /* Margin atas */
+      margin-bottom: auto; /* Margin bawah */
+      margin-left: 170px; /* Margin kiri */
+      float: right; /* Menyusun elemen ke kanan */
+      width: 50%; /* Lebar elemen */
+      padding: 20px; /* Padding */
+    }
+
+    .kolom3 .deskripsi3 {
+      margin-bottom: 10px; /* Margin bawah */
+      text-align: justify; /* Posisi teks rata kiri dan kanan */
+      font-size: 20px; /* Ukuran font */
+      font-weight: bold; /* Ketebalan font */
+      font-family: 'comic sans ms'; /* Jenis font */
+      color: darkslategrey; /* Warna teks */
+    }
+
+    /* CSS Styles - End */
+
+  </style>
+</head>
+<body>
+  <!-- Konten HTML - Start -->
+  <nav>
+    <div class="wrapper">
+      <div class="logo">
+        <a href="">FUN HEALTH</a> <!-- Link dengan teks "FUN HEALTH" -->
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="#home">Home</a></li> <!-- Tautan ke bagian dengan id "home" -->
+          <li><a href="#pola-makan">Pola Makan</a></li> <!-- Tautan ke bagian dengan id "pola-makan" -->
+          <li><a href="#pola-tidur">Pola Tidur</a></li> <!-- Tautan ke bagian dengan id "pola-tidur" -->
+          <li><a href="#olahraga">Olahraga</a></li> <!-- Tautan ke bagian dengan id "olahraga" -->
+          <li><a href="#contact">Contact</a></li> <!-- Tautan ke bagian dengan id "contact" -->
+          <li><a href="" class="tbl-biru">Sign Up</a></li> <!-- Tautan dengan class "tbl-biru" dan teks "Sign Up" -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wrapper">
+    <section id="home">
+      <div class="gambardokter">
+        <img src="https://videoanimasiku.com/wp-content/uploads/2019/06/%E2%80%94Pngtree%E2%80%94health-workers-fight-coronavirus_5349560.png" alt="Kesehatan mu tolong dijaga" height="400" width="400"> <!-- Gambar dengan teks alternatif -->
+      </div>
+      <div class="kolom">
+        <p class="deskripsi">Ayo terapkan gaya hidup sehat #sakit itu ga enak loh</p> <!-- Paragraf dengan class "deskripsi" -->
+        <h2>Terapkan Hidup Sehat</h2> <!-- Heading level 2 -->
+        <p>Selamat datang di situs web kami yang akan membantu Anda menjaga kesehatan tubuh Anda.</p> <!-- Paragraf -->
+        <p><a href="" class="tbl-pink">Pelajari lebih lanjut</a></p> <!-- Tautan dengan class "tbl-pink" dan teks "Pelajari lebih lanjut" -->
+      </div>
+    </section>
+
+    <section id="pola-makan">
+      <div class="kolom2">
+        <p class="deskripsi2">Pola Makan</p> <!-- Paragraf dengan class "deskripsi2" -->
+        <h2>4 Sehat 5 Sempurna</h2> <!-- Heading level 2 -->
+        <p>
+          <!-- Paragraf dengan beberapa baris dan break tag <br> digunakan untuk membuat baris baru (spasi) -->
+          <!-- format i untuk membuat teks miring/ menggaris bawahi text -->
+          <i>Konsumsi makanan dengan komposisi yang lengkap untuk memenuhi asupan nutrisi. </i><br>“Piring Makanku” merupakan salah satu pedoman dari Kementrian Kesehatan. Pedoman tersebut, menyarankan untuk makan yang tidak sekedar mengenyangkan. Tetapi juga mengusahakan pada saat makan dipiring tersedia buah-buahan, sayur-sayuran, dan berisi karbohidrat serta protein.
+        </p>
+        <p>Mencukupi kebutuhan cairan tubuh juga penting dalam menjaga daya tahan tubuh kita. Jaga tubuh kita agar tidak dehidrasi dengan minum air putih setidaknya 6-8 gelas per hari dan usahakan untuk menghindari mengonsumsi minuman yang mengangung gula.</p> <!-- Paragraf -->
+        <p><a href="" class="tbl-biru">Pelajari lebih lanjut</a></p> <!-- Tautan dengan class "tbl-biru" dan teks "Pelajari lebih lanjut" -->
+      </div>
+      <img src="https://media.istockphoto.com/id/1355873466/id/vektor/makan-makanan-sehat.jpg?s=612x612&w=is&k=20&c=skLsf8myA-gZN_-na6i4QxJ3OkGo4-OsPBAe2GnzKEY=" alt="makan-makanan-sehat" style="height: 400px; width: 400px; padding: 20px; margin-left: 100px;"> <!-- Gambar dengan teks alternatif dan beberapa atribut styling -->
+    </section>
+  </div>
+
+  <section id="pola-tidur">
+    <div class="kolom3">
+      <p class="deskripsi3">Pola Tidur</p> <!-- Paragraf dengan class "deskripsi3" -->
+      <h2>Tidak Begadang</h2> <!-- Heading level 2 -->
+      <p> Beberapa riset menunjukkan bahwa orang yang sering begadang akan lebih rentan mengalami gangguan fungsi otak dan juga gangguan tidur berupa insomnia. Dalam jangka panjang, efek begadang tersebut bisa meningkatkan risiko terjadinya gangguan mental, seperti depresi dan gangguan cemas..</p> <!-- Paragraf -->
+      <p>Risiko ini juga akan semakin meningkat, jika seseorang memiliki kebiasaan kurang sehat, seperti sering merokok, jarang olahraga, sering stres, dan tidak menjaga pola makan.</p> <!-- Paragraf -->
+      <p><a href="" class="tbl-pink">Pelajari lebih lanjut</a></p> <!-- Tautan dengan class "tbl-pink" dan teks "Pelajari lebih lanjut" -->
+    </div>
+    <div class="gambar3">
+      <img src="https://img.freepik.com/free-vector/insomnia-concept-illustration_114360-3684.jpg?w=740&t=st=1695995048~exp=1695995648~hmac=713705e6e7e5be7fdbcb4acefda75f344e95f8b4ed15e42c592ff4abac498417" alt="gambar pola tidur" style="height: 400px; width: 400px; padding: 20px; margin-left: 100px;"> <!-- Gambar dengan teks alternatif dan beberapa atribut styling -->
+    </div>
+  </section>
+  <!-- Konten HTML - End -->
+</body>
+</html>
+
+
+<!-- maaf bu untuk preferensi saya belajar dari  yt dan saya kemudian modifikasi lagi dan sebenarnya ini terpisah html dan css namun saya gabung menjadi 1 dan saya kasih penjelasan dan belum selesai tapi ini insyallah udah mencakup semuanya  -->
